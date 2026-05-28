@@ -1,120 +1,140 @@
-```css
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-body{
-  font-family:Arial, sans-serif;
-
-  height:100vh;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  background:
-  linear-gradient(
-    135deg,
-    #0f2027,
-    #203a43,
-    #2c5364
-  );
+/* 2. Modern Background */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #004c97 0%, #e30613 100%);
+    background-attachment: fixed;
+    padding: 20px;
 }
 
-.container{
-
-  width:350px;
-
-  padding:30px;
-
-  border-radius:20px;
-
-  background:rgba(255,255,255,0.1);
-
-  backdrop-filter:blur(15px);
-
-  box-shadow:
-  0 8px 32px rgba(0,0,0,0.3);
-
-  border:
-  1px solid rgba(255,255,255,0.2);
-
-  color:white;
+/* 3. Glassmorphism Container */
+.container {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-h1{
-  text-align:center;
-  margin-bottom:25px;
+/* 4. Header Styling */
+.header-section {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-label{
-  display:block;
-  margin-top:15px;
-  margin-bottom:5px;
+h1 {
+    color: #004c97;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
 }
 
-input,
-select{
-
-  width:100%;
-
-  padding:12px;
-
-  border:none;
-
-  border-radius:10px;
-
-  outline:none;
-
-  background:
-  rgba(255,255,255,0.2);
-
-  color:white;
-
-  font-size:16px;
+.header-section p {
+    color: #666;
+    font-size: 0.9rem;
 }
 
-select option{
-  color:black;
+/* 5. Inputs & Labels */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.85rem;
 }
 
-input::placeholder{
-  color:#ddd;
+input, select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+    background: #f9f9f9;
+    color: #333;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
-button{
-
-  width:100%;
-
-  margin-top:25px;
-
-  padding:14px;
-
-  border:none;
-
-  border-radius:12px;
-
-  background:#00c853;
-
-  color:white;
-
-  font-size:16px;
-
-  cursor:pointer;
-
-  transition:0.3s;
+/* Custom Dropdown Arrow */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23004C97%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 0.65rem auto;
+    cursor: pointer;
 }
 
-button:hover{
-  background:#00e676;
-  transform:scale(1.03);
+input:focus, select:focus {
+    border-color: #004c97;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 76, 151, 0.1);
 }
 
-#status{
-  text-align:center;
-  margin-top:20px;
-  font-weight:bold;
+/* 6. Action Button */
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #004c97;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
-```
+
+button:hover {
+    background: #003366;
+    transform: translateY(-2px);
+}
+
+/* 7. WhatsApp & Status */
+.support-section {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background: #128c7e;
+}
+
+#status {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #004c97;
+}
+
+/* Mobile Friendly */
+@media (max-width: 480px) {
+    .container { padding: 25px; }
+}
