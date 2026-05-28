@@ -1,86 +1,55 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>Buy Mobile Data</title>
-
-  <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CnKDataHub | Purchase Data</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="container">
+    <!-- Header Section -->
+    <header class="header-section">
+        <h1>Welcome to CnKDataHub</h1>
+        <p>Purchase your data bundle safely and easily.</p>
+    </header>
 
-  <h1>Buy Mobile Data</h1>
+    <!-- Data Form -->
+    <form id="dataForm">
+        <label for="network">Network</label>
+        <select id="network" name="network" onchange="updateBundles()">
+            <option value="MTN">MTN</option>
+            <option value="Telecel">Telecel</option>
+            <option value="AirtelTigo">AirtelTigo</option>
+        </select>
 
-  <form id="dataForm">
+        <label for="bundle">Data</label>
+        <select id="bundle" name="bundle">
+            <!-- Bundles will be populated automatically by script.js -->
+        </select>
 
-    <label>Network</label>
+        <label for="phone">Mobile Money Number</label>
+        <input type="tel" id="phone" placeholder="024 XXX XXXX" required>
 
-    <select id="network">
+        <label for="reference">MoMo Reference</label>
+        <input type="text" id="reference" placeholder="Enter payment reference" required>
 
-      <option>MTN</option>
+        <button type="submit">Submit Order</button>
+    </form>
 
-      <option>Telecel</option>
+    <!-- Support Section -->
+    <div class="support-section">
+        <p style="margin-bottom: 10px; font-size: 0.8rem; color: #666;">Need assistance?</p>
+        <a href="https://wa.me/233537638549" target="_blank" class="whatsapp-btn">
+            Chat on WhatsApp
+        </a>
+    </div>
 
-      <option>AirtelTigo</option>
-
-    </select>
-
-    <label>Bundle</label>
-
-    <select id="bundle">
-
-      <option>1GB</option>
-
-      <option>2GB</option>
-
-      <option>5GB</option>
-
-      <option>10GB</option>
-
-    </select>
-
-    <label>Phone Number</label>
-
-    <input
-      type="text"
-      id="phone"
-      placeholder="024XXXXXXX"
-      required
-    >
-
-    <label>MoMo Reference</label>
-
-    <input
-      type="text"
-      id="reference"
-      placeholder="Enter payment reference"
-      required
-    >
-
-    <button type="submit">
-      Submit Order
-    </button>
-
-  </form>
-
-  <p id="status"></p>
-
+    <p id="status"></p>
 </div>
 
+<!-- Link to your script -->
 <script src="script.js"></script>
-
 </body>
 </html>
-```
